@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.top-page-links {
+margin-top: rem(102);
+@include mq('md') {
+margin-top: rem(110);
+}
+}
+
+.top-page-links__inner {
+  margin-inline: auto;
+max-width: var(--max-width);
+padding-inline: var(--inner-padding);
+@include mq('md') {
+max-width: calc(935px + var(--inner-padding) * 2);
+}
+}
+
+.top-page-links__list {
+display: grid;
+grid-template-columns: 1fr;
+gap: rem(81);
+@include mq('md') {
+grid-template-columns: repeat(2, 1fr);
+gap: rem(87);
+}
+}
+
+
+.top-page-links__title {
+text-align: center;
+}
+
+.top-page-links__link {
+display: block;
+@media (any-hover: hover) {
+&:hover .top-page-links__img {
+  scale: 1.05;
+}
+&:hover .top-page-links__link-text {
+  background-color: var(--main-yellow);
+  color: var(--white);
+}
+
+&:hover .top-page-links__link-text:after {
+  background-color: var(--white);
+  transform: translateX(rem(3));
+}
+}
+}
+
+.top-page-links__img-wrap {
+  border-radius: 10px;
+overflow: hidden;
+margin-top: rem(23);
+@include mq('md') {
+margin-top: rem(18);
+}
+}
+
+.top-page-links__img {
+  border-radius: 10px;
+height: auto;
+object-fit: cover;
+aspect-ratio: 350/225;
+transition: scale var(--duration-base) ease-in-out;
+@include mq('md') {
+  aspect-ratio: 424/272;
+}
+}
+
+.top-page-links__link-text {
+  margin-inline: auto;
+  margin-top: rem(23);
+  @include mq('md') {
+  margin-top: rem(18);
+  }
+}
+
+

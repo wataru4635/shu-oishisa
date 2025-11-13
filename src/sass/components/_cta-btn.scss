@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.cta-btn {
+  position: fixed;
+  right: rem(20);
+  bottom: rem(10);
+  z-index: var(--z-index-cta-btn);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+  @include mq('md') {
+  bottom: rem(20);
+  right: rem(76);
+  }
+  &.js-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.cta-button__link {
+display: flex;
+justify-content: center;
+gap: rem(25);
+align-items: center;
+border-radius: 12.609px;
+background: linear-gradient(90deg, #ADA142 0%, #847132 100%);
+padding: rem(14.5) rem(28) rem(14.5) rem(36);
+
+@include mq('md') {
+  padding: rem(20) rem(58) rem(20) rem(48.255);
+  gap: rem(33);
+}
+@media (any-hover: hover) {
+&:hover .cta-btn__icon {
+  transform: translateX(rem(5));
+}
+}
+}
+
+.cta-btn__text {
+  color: var(--white);
+  font-size: rem(15.13);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  letter-spacing: calc(1.513 / 15.13 * 1em);
+}
+
+.cta-btn__icon {
+  width: rem(8);
+  aspect-ratio: 7/15;
+  background-color: var(--white);
+  -webkit-mask-image: url('../images/common/arrow-right.svg');
+  mask-image: url('../images/common/arrow-right.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  position: relative;
+  top: rem(1);
+  transition: transform var(--duration-base) ease;
+  will-change: transform;
+}
+

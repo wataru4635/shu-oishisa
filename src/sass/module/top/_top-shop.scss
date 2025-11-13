@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.top-shop {
+margin-top: rem(74);
+@include mq('md') {
+margin-top: rem(120);
+}
+}
+
+.top-shop__inner {
+margin-inline: auto;
+max-width: var(--max-width);
+padding-inline: var(--inner-padding);
+@include mq('md') {
+  --inner-padding: 80px;
+max-width: calc(789px + var(--inner-padding) * 2);
+}
+}
+
+
+.top-shop__notice {
+  text-align: center;
+  font-size: rem(16);
+  font-weight: var(--font-weight-semibold);
+  line-height: 2.35;
+  letter-spacing: calc(2 / 20 * 1em);
+  @include mq('md') {
+    font-size: rem(20);
+  }
+}

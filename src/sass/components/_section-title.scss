@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.section-title {
+  font-family: var(--font-family-second);
+  font-size: rem(25);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.1;
+  letter-spacing: calc(2.5 / 25 * 1em);
+  @include mq('md') {
+    font-size: rem(30);
+  }
+}

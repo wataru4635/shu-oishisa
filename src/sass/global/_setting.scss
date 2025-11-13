@@ -1,0 +1,100 @@
+@use "sass:math";
+
+// インナー幅設定
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1150px;
+// ※キュンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 35px;
+$padding-sp: 20px;
+
+:root {
+  --inner-padding: 30px;
+}
+
+@media (max-width: 767px) {
+:root {
+  --inner-padding: 20px;
+  --max-width: 500px;
+}
+}
+
+////////////////////
+// フォント設定
+////////////////////
+
+:root {
+  --font-family-base: "Noto Sans JP", "Noto Sans", sans-serif;
+  --font-family-second: "Noto Serif JP", "Noto Serif", serif;
+}
+// ※検証ツールでしっかり反映されているか確認する
+
+
+// フォントウェイト
+:root {
+  --font-weight-regular: 400;
+  --font-weight-normal: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+}
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+:root {
+  --black: #000;
+  --white: #fff;
+  --bg-color: #FFF8ED;
+  --main-yellow: #ADA142;
+  --main-red: #832323;
+}
+
+////////////////////
+// z-index
+///////////////////
+
+:root {
+  --z-index-header: 100;
+  --z-index-to-top: 200;
+  --z-index-cta-btn: 200;
+  --z-index-drawer: 1000;
+  --z-index-hamburger: 2000;
+  --z-index-modal: 10000;
+}
+
+////////////////////
+// レスポンシブ
+///////////////////
+:root {
+  --cq-ref-mobile: 390;
+  --cq-ref: 1366;
+  --fluid-basis-mobile: (100vw - 320px) / (390 - 320);
+  --fluid-basis: (100vw - 768px) / (1366 - 768);
+  --fluid-basis-2: (100vw - 1366px) / (1800 - 1366);
+}
+
+////////////////////
+// アニメーション設定
+///////////////////
+
+:root {
+  --duration-short: 0.2s;
+  --duration-base: 0.3s;
+  --duration-long: 0.6s;
+  --duration-fv: 0.7s;
+
+  --ease-smooth-bounce: cubic-bezier(.48, .07, .33, .79);
+}
+
+////////////////////
+// bodyの指定
+////////////////////
+
+body {
+  color: var(--black);
+  font-family: var(--font-family-base);
+}

@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.top-gyoza {
+  background-color: var(--white);
+  position: relative;
+  padding-bottom: rem(40);
+  @media (max-width: 767px) {
+  padding-top: rem(70);
+  }
+@include mq('md') {
+padding-bottom: rem(40);
+}
+}
+
+.top-gyoza__bg-top {
+  position: absolute;
+  top: -7vw;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: -1;
+}
+
+.top-gyoza__bg-bottom {
+  position: absolute;
+  bottom: -5vw;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: -1;
+}
+.top-gyoza__inner {
+  margin-inline: auto;
+  max-width: var(--max-width);
+padding-inline: var(--inner-padding);
+@include mq('md') {
+max-width: calc(1090px + var(--inner-padding) * 2);
+}
+}
+
+.top-gyoza__content-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include mq('md') {
+  grid-template-columns: 547fr 489fr;
+  gap: rem(54);
+  align-items: center;
+  }
+}
+
+.top-gyoza__img-wrap {
+  border-radius: 10px 50px 10px 10px;
+}
+
+.top-gyoza__img {
+  height: auto;
+  border-radius: 10px 50px 10px 10px;
+  object-fit: cover;
+  aspect-ratio: 350/223;
+  @include mq('md') {
+  aspect-ratio: 547/351;
+  }
+}
+
+.top-gyoza__content {
+@media (max-width: 767px) {
+  margin-top: rem(23);
+}
+}
+
+.top-gyoza__content.is-active {
+ & .top-gyoza__title {
+  opacity: 1;
+  translate: 0 0;
+ }
+ & .top-gyoza__text {
+  opacity: 1;
+  translate: 0 0;
+ }
+ & .top-gyoza__btn-wrap {
+  opacity: 1;
+  translate: 0 0;
+ }
+}
+
+.top-gyoza__title {
+  opacity: 0;
+  translate: 10px 0;
+  transition: opacity 1s ease-in-out, translate 1s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.top-gyoza__text {
+  font-size: rem(15);
+  font-weight: var(--font-weight-regular);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+  margin-top: rem(23);
+  opacity: 0;
+  translate: 10px 0;
+  transition: opacity 1s ease-in-out, translate 1s ease-in-out;
+  transition-delay: 0.3s;
+  @include mq('md') {
+    margin-top: rem(51);
+  }
+}
+
+
+.top-gyoza__btn-wrap {
+  margin-top: rem(23);
+  opacity: 0;
+  translate: 10px 0;
+  transition: opacity 1s ease-in-out, translate 1s ease-in-out;
+  transition-delay: 0.4s;
+  @include mq('md') {
+    margin-top: rem(50);
+  }
+}

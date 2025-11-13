@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.top-external {
+margin-top: rem(68);
+@include mq('md') {
+margin-top: rem(107);
+}
+}
+
+.top-external__inner {
+margin-inline: auto;
+max-width: var(--max-width);
+padding-inline: var(--inner-padding);
+@include mq('md') {
+  --inner-padding: 45px;
+max-width: calc(919px + var(--inner-padding) * 2);
+}
+}
+
+.top-external__list {
+display: grid;
+grid-template-columns: 1fr;
+gap: rem(43);
+@include mq('md') {
+grid-template-columns: repeat(2, 1fr);
+gap: rem(71);
+}
+}
+
+
+.top-external__link {
+  display: grid;
+  grid-template-columns: 188fr 162fr;
+  @include mq('md') {
+  grid-template-columns: 240fr 184fr;
+  }
+  @media (any-hover: hover) {
+  &:hover .link-btn {
+  background-color: var(--main-yellow);
+  color: var(--white);
+  &:after {
+  background-color: var(--white);
+  transform: translateX(rem(3));
+  }
+  }
+  }
+
+}
+
+.top-external__item--instagram {
+& .top-external__label {
+  gap: rem(8);
+  @include mq('md') {
+  padding-left: rem(15);
+  }
+}
+}
+
+.top-external__label {
+  border-radius: 10px 0 0 10px;
+  background:  linear-gradient(180deg, #ADA142 0%, #938238 100%);
+  padding: rem(33) rem(5) rem(33) rem(5);
+  display: flex;
+justify-content: center;
+@media (max-width: 767px) {
+align-items: center;
+}
+@include mq('md') {
+  padding: rem(39) rem(10) rem(39) rem(10);
+}
+}
+
+.top-external__label-text {
+  color: var(--white);
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: rem(20.637);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.1;
+  letter-spacing: calc(2.064 / 20.637 * 1em);
+  @include mq('md') {
+    font-size: rem(25);
+  }
+}
+
+.top-external__label-img {
+  width: rem(27.2);
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  @include mq('md') {
+    width: rem(33);
+  }
+}
+
+.top-external__btn-wrap {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--white);
+border-radius: 0 10px 10px 0;
+padding: rem(33) rem(3) rem(33) rem(3);
+@include mq('md') {
+  padding: rem(39) rem(10) rem(39) rem(10);
+}
+@media (max-width: 767px) {
+& .link-btn {
+  padding: rem(4.5) clamp(11.5px, calc(11.5px + 10 * var(--fluid-basis-mobile)), 21.5px) rem(4.5) clamp(11.5px, calc(11.5px + 10 * var(--fluid-basis-mobile)), 21.5px);
+}
+}
+}

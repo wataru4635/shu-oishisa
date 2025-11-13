@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.top-contact {
+margin-top: rem(63);
+padding-bottom: rem(63);
+@include mq('md') {
+margin-top: rem(88);
+padding-bottom: rem(83);
+}
+}
+
+.top-contact__inner {
+margin-inline: auto;
+max-width: var(--max-width);
+padding-inline: var(--inner-padding);
+@include mq('md') {
+  --inner-padding: 80px;
+max-width: calc(789px + var(--inner-padding) * 2);
+}
+}
