@@ -157,30 +157,42 @@
     <div class="top-news__inner">
 
       <div class="top-news__content">
-        <ul class="top-news__list news-list js-news-list">
-          <li class="news-list__item">
-            <a href="#" class="news-list__link">
-              <time class="news-list__date" datetime="2025-10-01">2025.10.01</time>
-              <span class="news-list__title">お知らせのタイトルが入ります。</span>
-            </a>
-          </li>
-          <li class="news-list__item">
-            <a href="#" class="news-list__link">
-              <time class="news-list__date" datetime="2025-10-01">2025.10.01</time>
-              <span class="news-list__title">お知らせのタイトルが入ります。</span>
-            </a>
-          </li>
-          <li class="news-list__item">
-            <a href="#" class="news-list__link">
-              <time class="news-list__date" datetime="2025-10-01">2025.10.01</time>
-              <span class="news-list__title">お知らせのタイトルが入ります。</span>
-            </a>
-          </li>
-        </ul>
+        <?php
+        $args = array(
+          'post_type'      => 'news',
+          'posts_per_page' => 3,
+          'post_status'    => 'publish',
+          'orderby'        => 'date',
+          'order'          => 'DESC'
+        );
+        $news_query = new WP_Query($args);
+        ?>
 
-        <div class="top-news__btn-wrap">
-          <a href="#" class="link-btn">詳細を見る</a>
-        </div>
+        <?php if ($news_query->have_posts()) : ?>
+          <ul class="top-news__list news-list js-news-list">
+            <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+              <li class="news-list__item">
+                <a href="<?php the_permalink(); ?>" class="news-list__link">
+                  <time class="news-list__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+                    <?php echo esc_html(get_the_date('Y.m.d')); ?>
+                  </time>
+                  <span class="news-list__title"><?php the_title(); ?></span>
+                </a>
+              </li>
+            <?php endwhile; ?>
+          </ul>
+
+          <div class="top-news__btn-wrap">
+            <a href="<?php echo NEWS_URL; ?>" class="link-btn">詳細を見る</a>
+          </div>
+        <?php else : ?>
+          <p class="top-news__no-posts">現在、投稿はありません。</p>
+        <?php endif; ?>
+
+        <?php
+        // サブループ後はリセット
+        wp_reset_postdata();
+        ?>
       </div>
     </div>
   </section>

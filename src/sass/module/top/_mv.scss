@@ -46,9 +46,11 @@ aspect-ratio: 350/290;
 .mv__swiper .swiper-slide.swiper-slide-active .swiper-img,
 .mv__swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
 .mv__swiper .swiper-slide.swiper-slide-prev .swiper-img {
-  animation: scale 8s linear 0s normal both;
+  animation: scale-sp 8s linear 0s normal both;
   transform-origin: left top;
-
+@include mq('md') {
+  animation: scale 8s linear 0s normal both;
+}
 }
 
 @keyframes scale {
@@ -58,5 +60,15 @@ aspect-ratio: 350/290;
 
   100% {
     transform: scale(1.04);
+  }
+}
+
+@keyframes scale-sp {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.06);
   }
 }

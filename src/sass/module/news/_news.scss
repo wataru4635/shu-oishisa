@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.news {
+margin-top: rem(50);
+@include mq('md') {
+  margin-top: rem(85);
+}
+}
+
+.news__header {
+  margin-inline: auto;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+  @include mq('md') {
+  max-width: 1366px;
+  gap: rem(32);
+  }
+  }
+
+  
+  .news__line {
+    height: 1.5px;
+    background-color: var(--main-red);
+    width: rem(50);
+  @include mq('md') {
+  width: rem(126);
+  }
+  }
+  
+
+.news__inner {
+  background-color: var(--white);
+  margin-top: rem(30);
+  padding-block: rem(38);
+  @include mq('md') {
+  margin-top: rem(20);
+  padding-block: rem(55) rem(68);
+  }
+}
+
+.news__content {
+  margin-inline: auto;
+  max-width: var(--max-width);
+  padding-inline: var(--inner-padding);
+  @include mq('md') {
+    max-width: calc(909px + var(--inner-padding) * 2);
+    }
+}
+
+.news__pagination {
+  margin-top: rem(54);
+  @include mq('md') {
+    margin-top: rem(58);
+  }
+}
+
+.news__btn-wrap {
+  margin-top: rem(58);
+  padding-bottom: rem(57);
+  text-align: center;
+  @include mq('md') {
+    margin-top: rem(66);
+    padding-bottom: rem(110);
+  }
+}

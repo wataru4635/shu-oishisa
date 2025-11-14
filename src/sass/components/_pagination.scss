@@ -1,0 +1,94 @@
+@use "global"as *;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: rem(13);
+  row-gap: rem(15);
+  flex-wrap: wrap;
+
+  @include mq('md') {
+  }
+}
+
+
+.pagination .page-link,
+.pagination .current-page {
+  color: var(--main-red);
+  font-family: var(--font-family-second);
+  font-size: 15px;
+  font-weight: var(--font-weight-bold);
+  aspect-ratio: 1/1;
+  width: rem(40);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// dotと隣接する数字の余白を狭くする
+.pagination .dots + .page-link,
+.pagination .dots + .current-page {
+  margin-left: rem(-10);
+}
+
+.pagination .page-link + .dots,
+.pagination .current-page + .dots {
+  margin-left: rem(-10);
+}
+
+.pagination .page-link {
+  border: 2px solid var(--white);
+  transition: background-color var(--duration-base) ease, color var(--duration-base) ease, border var(--duration-base) ease;
+@media (any-hover: hover) {
+  &:hover {
+    background-color: var(--main-red);
+    color: var(--white);
+    border: 2px solid var(--main-red);
+  }
+}
+}
+.pagination .current-page {
+  border: 2px solid var(--main-red);
+  background-color: var(--main-red);
+  color: var(--white);
+}
+
+.pagination .dots {
+  font-family: var(--font-family-second);
+  font-size: rem(25);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: calc(1.25 / 25 * 1em);
+}
+
+.pagination .prev,
+.pagination .next {
+  color: var(--main-red);
+  text-align: center;
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: calc(0.7 / 14 * 1em);
+  aspect-ratio: 1/1;
+  width: rem(40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--duration-base) ease;
+}
+
+.pagination .prev {
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.pagination .next {
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+}

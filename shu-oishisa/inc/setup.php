@@ -127,6 +127,11 @@ function codeups_clean_up_head() {
 add_action('after_setup_theme', 'codeups_clean_up_head');
 
 // ==========================================================================
+// SEOプラグイン使用しない場合：wp_head の <title> タグを削除
+// ==========================================================================
+remove_action('wp_head', '_wp_render_title_tag', 1);
+
+// ==========================================================================
 // ブロックエディタのスタイルを追加
 // ==========================================================================
 
@@ -146,3 +151,34 @@ function add_block_editor_styles() {
     ' );
 }
 add_action( 'enqueue_block_editor_assets', 'add_block_editor_styles' );
+
+// ==========================================================================
+// カスタム投稿タイプのパーマリンク設定
+// ==========================================================================
+
+add_filter('post_type_link', 'custom_post_type_permalink', 10, 2);
+function custom_post_type_permalink($link, $post) {
+    if ($post->post_type === 'news') {
+        return home_url('/' . $post->post_type . '/' . $post->ID . '/');
+    }
+    if ($post->post_type === 'products') {
+        return home_url('/' . $post->post_type . '/' . $post->ID . '/');
+    }
+    return $link;
+}
+
+add_filter('rewrite_rules_array', 'custom_post_type_rewrite_rules');
+function custom_post_type_rewrite_rules($rules) {
+    $new_rules = array(
+        'news/([0-9]+)/?$' => 'index.php?post_type=news&p=$matches[1]',
+        'products/([0-9]+)/?$' => 'index.php?post_type=products&p=$matches[1]',
+    );
+    return $new_rules + $rules;
+}
+
+// ==========================================================================
+// メール送信者を変更
+// ==========================================================================
+// add_action('phpmailer_init', function($phpmailer) {
+//     $phpmailer->Sender = 'contact@oro-shopdesign.com';
+// });

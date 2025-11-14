@@ -15,7 +15,7 @@
   gap: rem(42);
 
   @include mq('md') {
-    padding: rem(26) rem(10) rem(26) rem(29);
+    padding: rem(26) rem(15) rem(26) rem(29);
     align-items: center;
   }
 

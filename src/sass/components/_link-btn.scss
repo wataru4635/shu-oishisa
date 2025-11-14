@@ -35,3 +35,61 @@
   aspect-ratio: 1/1;
   transition: background-color var(--duration-base) ease-in-out, transform var(--duration-base) ease-in-out;
 }
+
+.link-btn02 {
+font-family: var(--font-family-second);
+font-size: rem(16);
+font-weight: var(--font-weight-normal);
+letter-spacing: calc(1.6 / 16 * 1em);
+border-radius: calc(infinity * 1px);
+background-color: var(--bg-color);
+border: 2px solid var(--main-yellow);
+padding: rem(17) rem(15);
+min-width: rem(280);
+text-align: center;
+position: relative;
+width: fit-content;
+transition: background-color var(--duration-base) ease-in-out, color var(--duration-base) ease-in-out;
+@media (any-hover: hover) {
+  &:hover {
+    background-color: var(--main-yellow);
+    color: var(--white);
+  }
+}
+@media (any-hover: hover) {
+  &:hover::after {
+    background-color: var(--white);
+    right: rem(27);
+  }
+}
+&::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(33);
+  transform: translateY(-50%);
+  width: rem(8.6);
+  background-color: var(--main-yellow);
+  border-radius: calc(infinity * 1px);
+  aspect-ratio: 1/1;
+  transition: background-color var(--duration-base) ease-in-out, right var(--duration-base) ease-in-out;
+  will-change: right, background-color;
+}
+}
+
+.link-btn02.link-btn02--yellow {
+  background-color: var(--main-yellow);
+  color: var(--white);
+  &::after {
+    background-color: var(--bg-color);
+  }
+  @media (any-hover: hover) {
+  &:hover {
+    background-color: var(--bg-color);
+    color: var(--main-yellow);
+  }
+  &:hover::after {
+    background-color: var(--main-yellow);
+  }
+  }
+}
