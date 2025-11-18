@@ -1,0 +1,15 @@
+@use "global" as *;
+body.page-template-page-contact-thanks,
+body.post-type-archive-news,
+body.post-type-archive-products {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+body.page-template-page-contact-thanks .footer-wrapper,
+body.post-type-archive-news .footer-wrapper,
+body.post-type-archive-products .footer-wrapper {
+  margin-top: auto;
+}

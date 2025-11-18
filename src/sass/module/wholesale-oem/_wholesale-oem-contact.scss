@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.wholesale-oem-contact {
+margin-top: rem(100);
+@include mq('md') {
+margin-top: rem(90);
+}
+}
+
+.wholesale-oem-contact__inner {
+margin-inline: auto;
+max-width: var(--max-width);
+padding-inline: var(--inner-padding);
+@include mq('md') {
+  --inner-padding: 80px;
+max-width: calc(789px + var(--inner-padding) * 2);
+}
+}
+
+.wholesale-oem-contact__title {
+  color: var(--main-red);
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: rem(25);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.3;
+  @include mq('md') {
+    font-size: rem(30);
+    line-height: 1.5;
+    letter-spacing: calc(3 / 30 * 1em);
+  }
+}
+
+.wholesale-oem-contact__link-banner {
+margin-top: rem(36);
+@include mq('md') {
+margin-top: rem(45);
+}
+}

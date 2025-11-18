@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.privacy-policy {
+margin-top: rem(50);
+padding-bottom: rem(56.6);
+@include mq('md') {
+margin-top: rem(111);
+padding-bottom: rem(109.6);
+}
+}
+
+.privacy-policy__inner {
+margin-inline: auto;
+max-width: var(--max-width);
+padding-inline: 20px 17px;
+@include mq('md') {
+  padding-inline: var(--inner-padding);
+max-width: calc(769px + var(--inner-padding) * 2);
+}
+}
+
+.privacy-policy__heading {
+  font-size: rem(15);
+  font-weight: var(--font-weight-normal);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+  margin-top: rem(31);
+}
+
+
+.privacy-policy__text {
+  font-size: rem(15);
+  font-weight: var(--font-weight-regular);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+}
+
+.privacy-policy__list--number {
+list-style: decimal;
+margin-left: rem(24);
+}
+
+.privacy-policy__item {
+  font-size: rem(15);
+  font-weight: var(--font-weight-regular);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+}
+
+.privacy-policy__list--dot {
+list-style: disc;
+margin-left: rem(24);
+}
+
+.privacy-policy__list--dot li::marker {
+  font-size: 10px;
+}
+
+.privacy-policy__btn {
+margin-top: rem(35);
+text-align: center;
+@include mq('md') {
+margin-top: rem(60);
+}
+}
+

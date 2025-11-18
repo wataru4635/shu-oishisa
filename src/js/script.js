@@ -7,22 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
   const breakpoint = 768;
 
-  // 要素が見つからない場合は処理を終了
   if (!drawer || !hamburgerButton) return;
 
-  // ドロワーの開閉状態を管理する関数
   const toggleDrawer = (isOpen) => {
     if (isOpen) {
-      // 開く処理
       drawer.classList.add('is-open');
       hamburgerButton.classList.add('is-open');
       body.classList.add('body-hidden');
       
-      // 実際の高さを取得してアニメーション
       const drawerHeight = drawer.scrollHeight;
       drawer.style.height = `${drawerHeight}px`;
     } else {
-      // 閉じる処理
       drawer.style.height = '0px';
       drawer.classList.remove('is-open');
       hamburgerButton.classList.remove('is-open');
@@ -30,13 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // ハンバーガーボタンでドロワーをトグル
   hamburgerButton.addEventListener('click', () => {
     const isOpen = !drawer.classList.contains('is-open');
     toggleDrawer(isOpen);
   });
 
-  // リサイズ処理の最適化（デバウンス処理）
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
@@ -86,18 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
   });
 
-  observeElements(".js-slide-left", "is-active", {
-    rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -10% 0px")
-  });
-
-  observeElements(".js-slide-right", "is-active", {
-    rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -10% 0px")
-  });
-
-  observeElements(".js-fade-down", "is-active", {
-    rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -10% 0px")
-  });
-
   observeElements(".js-scaleImg", "is-active", {
     rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -5% 0px")
   });
@@ -111,6 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   observeElements(".js-news-list", "is-active", {
+    rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -5% 0px")
+  });
+
+  observeElements(".js-popUp", "is-active", {
     rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -5% 0px")
   });
 

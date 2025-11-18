@@ -91,5 +91,8 @@ justify-content: flex-end;
   }
 }
 
-
-
+.top-news__no-posts {
+  @include mq('md') {
+  margin-bottom: rem(24);
+  }
+}

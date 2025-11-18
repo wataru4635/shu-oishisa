@@ -1,0 +1,166 @@
+@use "global"as *;
+
+.custom-gyoza {
+  margin-top: rem(97);
+  background-color: var(--white);
+  position: relative;
+
+  @media (max-width: 767px) {
+    padding-top: rem(50);
+    padding-bottom: rem(60);
+  }
+
+  @include mq('md') {
+    margin-top: 14vw;
+  }
+}
+
+.custom-gyoza__bg {
+  position: absolute;
+  top: -8vw;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  aspect-ratio: 1399/215;
+  z-index: -1;
+
+  @include mq('md') {
+    top: -10.5vw;
+  }
+}
+
+.custom-gyoza__bg-bottom {
+  position: absolute;
+  bottom: -10vw;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  aspect-ratio: 1399.111/220;
+  z-index: -1;
+}
+
+.custom-gyoza__inner {
+  margin-inline: auto;
+  max-width: var(--max-width);
+  padding-inline: var(--inner-padding);
+
+  @include mq('md') {
+    max-width: calc(1027px + var(--inner-padding) * 2);
+  }
+}
+
+.custom-gyoza__title {
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: rem(25);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+
+  @include mq('md') {
+    font-size: rem(30);
+    letter-spacing: calc(3 / 30 * 1em);
+  }
+}
+
+.custom-gyoza__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(66);
+  margin-top: rem(41);
+
+  @media (max-width: 767px) {
+    padding-inline: rem(22);
+  }
+
+  @include mq('md') {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(53);
+    margin-top: rem(71);
+  }
+}
+
+.custom-gyoza__item.custom-gyoza__item--03 {
+  @media (max-width: 767px) {
+    margin-top: rem(30);
+  }
+}
+
+.custom-gyoza__lead {
+  color: var(--main-red);
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: rem(20);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.3;
+  letter-spacing: calc(2 / 20 * 1em);
+}
+
+.custom-gyoza__lead-text {
+  padding: rem(1) rem(20);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: rem(11);
+    width: 1px;
+    height: 100%;
+    background-color: var(--main-red);
+    rotate: -25deg;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: rem(15);
+    width: 1px;
+    height: 100%;
+    background-color: var(--main-red);
+    rotate: 25deg;
+  }
+}
+
+.custom-gyoza__item--02 .custom-gyoza__lead-text {
+  &::before {
+    left: rem(-10);
+  }
+
+  &::after {
+    right: rem(-8);
+  }
+}
+
+.custom-gyoza__item--03 .custom-gyoza__lead-text {
+  &::before {
+    left: rem(-29);
+  }
+
+  &::after {
+    right: rem(-27);
+  }
+}
+
+.custom-gyoza__img-wrap {
+  margin-top: rem(16);
+  border-radius: 101.5px;
+}
+
+.custom-gyoza__img {
+  border-radius: 101.5px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 307/197;
+}
+
+.custom-gyoza__text {
+  font-size: rem(15);
+  font-weight: var(--font-weight-regular);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+  margin-top: rem(16);
+  padding-inline: rem(28);
+}

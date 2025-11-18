@@ -62,6 +62,18 @@ function enqueue_custom_scripts() {
         );
     }
 
+    // 卸販売 / OEMページ専用JS
+    if (is_page('wholesale-oem') || is_page_template('page-wholesale-oem.php')) {
+        $script = '/js/faq.js';
+        wp_enqueue_script(
+            'faq-script',
+            "{$asset_uri}{$script}",
+            [],
+            $get_ver("{$theme_path}/assets{$script}"),
+            true
+        );
+    }
+
     // お問い合わせページ専用JS
     if (is_page('contact') || is_page_template('page-contact.php')) {
         $script = '/js/form.js';
@@ -104,9 +116,9 @@ function enqueue_preload_headers() {
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="preload"
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="preload"
     as="style" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet"
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet"
     media="print" onload="this.media='all'">
 <?php
 }
@@ -179,6 +191,6 @@ function custom_post_type_rewrite_rules($rules) {
 // ==========================================================================
 // メール送信者を変更
 // ==========================================================================
-// add_action('phpmailer_init', function($phpmailer) {
-//     $phpmailer->Sender = 'contact@oro-shopdesign.com';
-// });
+add_action('phpmailer_init', function($phpmailer) {
+    $phpmailer->Sender = REPLY_EMAIL;
+});
