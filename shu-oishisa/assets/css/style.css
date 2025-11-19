@@ -275,7 +275,7 @@ body.post-type-archive-products .footer-wrapper {
 .contact-form {
 	background-color: var(--white);
 	margin-top: 1.9375rem;
-	padding-bottom: 4.0625rem;
+	padding-bottom: 3.375rem;
 	padding-top: 2.375rem;
 	position: relative;
 }
@@ -396,7 +396,7 @@ body.post-type-archive-products .footer-wrapper {
 }
 
 .contact-form__submit {
-	margin-top: 3.0625rem;
+	margin-top: 3.375rem;
 	text-align: center;
 }
 
@@ -475,7 +475,7 @@ input:invalid:not(:placeholder-shown) + .format-error-message {
 
 .contact-form--confirm {
 	margin-top: 2rem;
-	padding-bottom: 3.8125rem;
+	padding-bottom: 3.5rem;
 }
 
 .contact-form--confirm .contact-form__bg {
@@ -501,14 +501,15 @@ input:invalid:not(:placeholder-shown) + .format-error-message {
 	align-items: center;
 	display: grid;
 	grid-template-columns: 1fr;
-	margin-top: 5.3125rem;
+	margin-top: 3.5rem;
 }
 
 .contact-form__confirm-submit-back {
 	background-color: var(--white);
 	border: 2px solid var(--main-yellow);
 	border-radius: calc(infinity * 1px);
-	color: var(--main-yellow);
+	color: var(--black);
+	font-family: var(--font-family-second);
 	font-size: 0.9375rem;
 	font-weight: var(--font-weight-normal);
 	letter-spacing: 2em;
@@ -1017,7 +1018,7 @@ body.page-template-page-contact-thanks .footer .footer__inner {
 }
 
 .post-products {
-	margin-top: 3.125rem;
+	margin-top: 8.4375rem;
 	padding-bottom: 3.5375rem;
 }
 
@@ -3511,7 +3512,7 @@ html {
 
 .contact-form {
 	margin-top: 2.0625rem;
-	padding-bottom: 2.1rem;
+	padding-bottom: 2.9375rem;
 	padding-top: 1.25rem;
 }
 
@@ -3555,7 +3556,7 @@ html {
 }
 
 .contact-form__submit {
-	margin-top: 4.125rem;
+	margin-top: 2.8125rem;
 }
 
 .contact-form__btn {
@@ -3565,7 +3566,7 @@ html {
 
 .contact-form--confirm {
 	margin-top: 2.0625rem;
-	padding-bottom: 2.4375rem;
+	padding-bottom: 3.75rem;
 }
 
 .contact-form--confirm .contact-form__bg {
@@ -3590,7 +3591,7 @@ html {
 	grid-template-columns: max-content auto;
 	left: 1rem;
 	margin-left: 0;
-	margin-top: 8.125rem;
+	margin-top: 3.75rem;
 	position: relative;
 }
 
@@ -4731,7 +4732,7 @@ html {
 }
 
 .footer__bg-img {
-	top: -13vw;
+	top: -12.8vw;
 }
 
 .footer__bg-img--pc {

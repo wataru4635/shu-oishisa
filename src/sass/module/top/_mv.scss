@@ -38,6 +38,7 @@ border-radius: 10px;
   object-fit: cover;
   border-radius: 10px;
 aspect-ratio: 350/290;
+
   @include mq('md') {
   aspect-ratio: 1214/683;
   }
@@ -52,6 +53,8 @@ aspect-ratio: 350/290;
   animation: scale 8s linear 0s normal both;
 }
 }
+
+
 
 @keyframes scale {
   0% {

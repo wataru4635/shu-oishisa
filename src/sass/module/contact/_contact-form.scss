@@ -2,14 +2,14 @@
 
 .contact-form {
   margin-top: rem(31);
-  padding-bottom: rem(65);
+  padding-bottom: rem(54);
   padding-top: rem(38);
   background-color: var(--white);
   position: relative;
 
   @include mq('md') {
     margin-top: rem(33);
-    padding-bottom: rem(33.6);
+    padding-bottom: rem(47);
     padding-top: rem(20);
   }
 }
@@ -183,10 +183,10 @@ gap: rem(7);
 
 .contact-form__submit {
   text-align: center;
-  margin-top: rem(49);
+  margin-top: rem(54);
 
   @include mq('md') {
-    margin-top: rem(66);
+    margin-top: rem(45);
   }
 }
 
@@ -278,11 +278,11 @@ input:invalid:not(:placeholder-shown)+.format-error-message {
 
 .contact-form--confirm {
   margin-top: rem(32);
-  padding-bottom: rem(61);
+  padding-bottom: rem(56);
 
   @include mq('md') {
     margin-top: rem(33);
-    padding-bottom: rem(39);
+    padding-bottom: rem(60);
   }
 }
 
@@ -336,7 +336,7 @@ input:invalid:not(:placeholder-shown)+.format-error-message {
 }
 
 .contact-form__confirm-submit {
-  margin-top: rem(85);
+  margin-top: rem(56);
   align-items: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -346,7 +346,7 @@ input:invalid:not(:placeholder-shown)+.format-error-message {
   }
 
   @include mq('md') {
-    margin-top: rem(130);
+    margin-top: rem(60);
     grid-template-columns: max-content auto;
     margin-left: 0;
     gap: rem(49);
@@ -365,8 +365,9 @@ input:invalid:not(:placeholder-shown)+.format-error-message {
 
 
 .contact-form__confirm-submit-back {
-  color: var(--main-yellow);
+  color: var(--black);
   font-size: rem(15);
+  font-family: var(--font-family-second);
   font-weight: var(--font-weight-normal);
   line-height: 1.6;
   text-indent: calc(30 / 15 * 1em);

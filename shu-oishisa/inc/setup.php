@@ -37,18 +37,18 @@ function enqueue_custom_scripts() {
         // Swiper JS
         wp_enqueue_script(
             'swiper-js',
-            'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',
+            'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
             [],
-            '8.0.0',
+            '11.1.14',
             true
         );
         
         // Swiper CSS
         wp_enqueue_style(
             'swiper-css',
-            'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
+            'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
             [],
-            '8.0.0'
+            '11.1.14'
         );
         
         // トップページ専用JS
