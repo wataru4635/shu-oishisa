@@ -4,6 +4,7 @@
 // ==========================================================================
 /* ---------- パスの短縮 ---------- */
 define('IMAGEPATH',            get_template_directory_uri() . '/assets/images');
+define('PDFPATH',              get_template_directory_uri() . '/assets/pdf');
 
 /* ---------- 各ページのリンク ---------- */
 define('HOME_URL',             esc_url(home_url('/')));                          // トップページ

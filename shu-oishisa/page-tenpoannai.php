@@ -64,7 +64,7 @@ Template Name: 店舗案内
       </div>
 
       <div class="tenpoannai__sdgs">
-        <a href="" class="tenpoannai__sdgs-link" target="_blank" rel="noopener noreferrer">
+        <a href="<?php echo PDFPATH; ?>/CompanyProfile_SDGs.pdf" class="tenpoannai__sdgs-link" target="_blank" rel="noopener noreferrer">
           <div class="tenpoannai__sdgs-label">
             <span class="tenpoannai__sdgs-label-text">SDGsへの<br>取り組み</span>
           </div>
@@ -92,3 +92,4 @@ Template Name: 店舗案内
 </main>
 
 <?php get_footer(); ?>
+
