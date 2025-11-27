@@ -19,6 +19,6 @@ define('CONTACT_THANKS_URL',   esc_url(home_url('/contact-thanks/')));          
 define('PRIVACY_POLICY_URL',   esc_url(home_url('/privacy-policy/')));           // プライバシーポリシー
 
 /* ---------- メール設定 ---------- */
-define('ADMIN_CONTACT_EMAIL',  'tanaka@fresh-yamasei.jp');                              // 管理者受信用メールアドレス
-define('REPLY_EMAIL',          'contact@shu-oishisa.com');                      // 自動返信送信元メールアドレス
-define('SITE_NAME',            '餃子の秀｜株式会社ヤマセイ');                     // サイト名
+define('ADMIN_CONTACT_EMAIL',  'info@fresh-yamasei.jp');        // 管理者受信用メールアドレス
+define('REPLY_EMAIL',          'contact@shu-oishisa.com');      // 自動返信送信元メールアドレス
+define('SITE_NAME',            '餃子の秀｜株式会社ヤマセイ');     // サイト名
