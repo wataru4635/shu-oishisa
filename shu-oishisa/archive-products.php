@@ -80,7 +80,7 @@
         <?php endif; ?>
 
     <div class="products__btn">
-      <a href="#top" class="link-btn02">ページトップへ</a>
+      <a href="<?php echo HOME_URL; ?>" class="link-btn02">ページトップへ</a>
     </div>
 
   </div>
