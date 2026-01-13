@@ -107,7 +107,7 @@
         echo esc_url(home_url('/'));
     }
   ?>" />
-  <meta property="og:image" content="<?php echo esc_url(home_url('/wp-content/themes/oro-shopdesign/assets/images/og_img.jpg')); ?>" />
+  <meta property="og:image" content="https://shu-oishisa.com/wp-content/themes/shu-oishisa/assets/images/og_img.jpg" />
   <meta property="og:site_name" content="【公式】餃子の秀｜工場直売餃子｜卸販売＆OEM｜静岡県磐田市" />
   <meta property="og:description" content="<?php
     $base_description = '静岡県磐田市・浜松市の自社農場から直送の新鮮野菜と、鹿児島産の厳選豚肉を使用したこだわり餃子。業務用餃子の卸販売・OEM製造も承ります。食品加工会社として野菜・肉を取り扱っているヤマセイグループです。';

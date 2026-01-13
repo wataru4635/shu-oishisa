@@ -215,7 +215,7 @@
         </li>
 
         <li class="top-external__item top-external__item--hometown js-fade-in --delay-1">
-          <a href="https://line.me/R/ti/p/@489oxohk?oat__id=3607345" class="top-external__link" target="_blank"
+          <a href="https://www.satofull.jp/products/list.php?partner=138800076|%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%A4%E3%83%9E%E3%82%BB%E3%82%A4" class="top-external__link" target="_blank"
             rel="noopener noreferrer">
             <div class="top-external__label">
               <span class="top-external__label-text">ふるさと納税</span>
