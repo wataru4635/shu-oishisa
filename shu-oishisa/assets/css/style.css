@@ -1933,14 +1933,6 @@ body.page-template-page-contact-thanks .footer .footer__inner {
 	padding-right: var(--inner-padding);
 }
 
-.top-shop__notice {
-	font-size: 1rem;
-	font-weight: var(--font-weight-semibold);
-	letter-spacing: 0.1em;
-	line-height: 2.35;
-	text-align: center;
-}
-
 .custom-gyoza {
 	background-color: var(--white);
 	margin-top: 6.0625rem;
@@ -4051,7 +4043,7 @@ body.page-template-page-contact-thanks .footer {
 }
 
 .top-news {
-	margin-top: 4.5625rem;
+	margin-top: 5.9375rem;
 }
 
 .top-news__header {
@@ -4133,10 +4125,6 @@ body.page-template-page-contact-thanks .footer {
 .top-shop__inner {
 	--inner-padding: 80px;
 	max-width: calc(789px + var(--inner-padding) * 2);
-}
-
-.top-shop__notice {
-	font-size: 1.25rem;
 }
 
 .custom-gyoza {

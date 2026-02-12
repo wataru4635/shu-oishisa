@@ -17,6 +17,7 @@ define('CONTACT_URL',          esc_url(home_url('/contact/')));                 
 define('CONTACT_CONFIRM_URL',  esc_url(home_url('/contact-confirm/')));          // お問い合わせ確認
 define('CONTACT_THANKS_URL',   esc_url(home_url('/contact-thanks/')));           // お問い合わせ完了
 define('PRIVACY_POLICY_URL',   esc_url(home_url('/privacy-policy/')));           // プライバシーポリシー
+define('SHOP_URL',            esc_url('https://shu-oishisa.stores.jp/'));       // ネットショップ（外部）
 
 /* ---------- メール設定 ---------- */
 define('ADMIN_CONTACT_EMAIL',  'info@fresh-yamasei.jp');        // 管理者受信用メールアドレス

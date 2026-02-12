@@ -156,9 +156,9 @@
           <li class="header__nav-item">
             <a href="<?php echo WHOLESALE_OEM_URL; ?>" class="header__nav-link<?php if(is_page('wholesale-oem')): ?> current<?php endif; ?>">卸販売／OEM</a>
           </li>
-          <!-- <li class="header__nav-item">
-            <a href="" class="header__nav-link" target="_blank" rel="noopener noreferrer">ネットショップ</a>
-          </li> -->
+          <li class="header__nav-item">
+            <a href="<?php echo SHOP_URL; ?>" class="header__nav-link" target="_blank" rel="noopener noreferrer">ネットショップ</a>
+          </li>
           <li class="header__nav-item">
             <a href="<?php echo CONTACT_URL; ?>" class="header__nav-link<?php if(is_page('contact')): ?> current<?php endif; ?>">お問い合わせ</a>
           </li>
@@ -191,10 +191,9 @@
           <a href="<?php echo WHOLESALE_OEM_URL; ?>"
             class="drawer__link<?php if(is_page('wholesale-oem')): ?> current<?php endif; ?>">卸販売／OEM</a>
         </li>
-        <!-- <li class="drawer__item">
-          <a href=""
-            class="drawer__link" target="_blank" rel="noopener noreferrer">ネットショップ</a>
-        </li> -->
+        <li class="drawer__item">
+          <a href="<?php echo SHOP_URL; ?>" class="drawer__link" target="_blank" rel="noopener noreferrer">ネットショップ</a>
+        </li>
         <li class="drawer__item">
           <a href="<?php echo CONTACT_URL; ?>"
             class="drawer__link<?php if(is_page('contact')): ?> current<?php endif; ?>">お問い合わせ</a>

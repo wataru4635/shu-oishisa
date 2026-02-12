@@ -128,7 +128,7 @@
 
   <section class="top-shop">
     <div class="top-shop__inner js-fade-in">
-      <a href="#" class="top-shop__link-banner link-banner" target="_blank" rel="noopener noreferrer">
+      <a href="<?php echo SHOP_URL; ?>" class="top-shop__link-banner link-banner" target="_blank" rel="noopener noreferrer">
         <div class="link-banner__content">
           <h2 class="link-banner__title section-title">ネットショップ</h2>
           <p class="link-banner__text">商品のご購入はこちら</p>
@@ -143,9 +143,6 @@
           <span class="link-banner__img-text">ショップページへ</span>
         </div>
       </a>
-      <p class="top-shop__notice">
-        ※現在準備中です
-      </p>
     </div>
   </section>
 

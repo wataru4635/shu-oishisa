@@ -16,15 +16,3 @@ padding-inline: var(--inner-padding);
 max-width: calc(789px + var(--inner-padding) * 2);
 }
 }
-
-
-.top-shop__notice {
-  text-align: center;
-  font-size: rem(16);
-  font-weight: var(--font-weight-semibold);
-  line-height: 2.35;
-  letter-spacing: calc(2 / 20 * 1em);
-  @include mq('md') {
-    font-size: rem(20);
-  }
-}
